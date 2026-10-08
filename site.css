@@ -50,7 +50,7 @@ h1,h2,h3{line-height:1.15; letter-spacing:-.02em; margin:0}
 .top-in{display:flex; align-items:center; gap:24px; height:64px}
 .brand{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none;
        font-size:22px; font-weight:750; letter-spacing:-.02em}
-.brand img{width:32px; height:32px}
+.brand img{width:32px; height:32px; border-radius:7px; box-shadow:0 0 0 1px var(--line)}   /* the dark mark, visible on dark too */
 .top-right{display:flex; align-items:center; gap:14px; margin-left:auto}
 .langs{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden}
 .langs a{color:var(--muted); text-decoration:none; font-size:13px; font-weight:650; padding:6px 10px}
@@ -85,11 +85,11 @@ h1,h2,h3{line-height:1.15; letter-spacing:-.02em; margin:0}
       background:radial-gradient(640px 360px at 22% 0%, var(--dn-soft), transparent 70%),
                  radial-gradient(640px 360px at 78% 0%, var(--uso-soft), transparent 70%)}
 .kicker{color:var(--muted); font-weight:700; font-size:14px; letter-spacing:.06em; text-transform:uppercase; margin:0 0 14px}
-h1{font-size:clamp(2.1rem, 5vw, 3.4rem); font-weight:780; letter-spacing:-.03em; max-width:16em; margin:0 auto}
+h1{font-size:clamp(2.1rem, 5vw, 3.4rem); font-weight:780; letter-spacing:-.03em; max-width:22em; margin:0 auto}
 /* the key words in both products' colours, as in the avatar's dot */
 h1 em{font-style:normal; color:var(--dn);
       background:linear-gradient(90deg, var(--dn), var(--uso)); -webkit-background-clip:text; background-clip:text;
-      -webkit-text-fill-color:transparent}
+      -webkit-text-fill-color:transparent; white-space:nowrap}
 .lead{font-size:1.15rem; color:var(--ink-2); margin:20px auto 0; max-width:36em}
 
 /* ---------------------------------------------------------------- The two products */
@@ -140,6 +140,9 @@ h1 em{font-style:normal; color:var(--dn);
   .product h2{gap:12px; min-height:46px}
   .product .icon{width:44px; height:44px}
   .product picture img{max-height:24px}
-  .product .ctas .btn{flex:1 1 auto}
+  .kicker{font-size:12.5px}
+  /* the site's button takes the room, GitHub keeps its size: the same in both cards */
+  .product .ctas{display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:10px}
+  .product .ctas .btn{padding-left:14px; padding-right:14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
