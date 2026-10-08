@@ -1,0 +1,145 @@
+/* dropnook.app — the overview of both products. One stylesheet, no web fonts; the same family
+   as dropnook.dropnook.app and uso.dropnook.app. Light and dark follow the system, unless the
+   ☀/☾ switch set data-theme on <html> (theme.js).
+   The page itself wears the dropnook avatar's slate; each product card wears its own accent:
+   Dropnook's teal, the office's Unraid orange — the same values as on their sites. */
+:root{
+  --bg:#F5F7F8; --surface:#FFFFFF; --band:#ECF0F2; --ink:#141A20; --ink-2:#36414A; --muted:#5C6872;
+  --line:#D9E0E4; --accent:#0B6E75; --accent-soft:#DFEFF0; --on-accent:#FFFFFF;
+  --dn:#0B6E75; --dn-soft:#DFEFF0; --dn-on:#FFFFFF;
+  --uso:#B8500B; --uso-soft:#FCEBDD; --uso-on:#FFFFFF;
+  --shadow:0 24px 60px -30px rgba(18,27,33,.40), 0 4px 14px -8px rgba(18,27,33,.16);
+  --radius:14px; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E131A; --surface:#161D25; --band:#121820; --ink:#E6ECF0; --ink-2:#C3CDD4; --muted:#95A3AD;
+    --line:#26313B; --accent:#54C0C4; --accent-soft:#13302F; --on-accent:#08161A;
+    --dn:#54C0C4; --dn-soft:#13302F; --dn-on:#08161A;
+    --uso:#FF9A4D; --uso-soft:#3A2414; --uso-on:#140A02;
+    --shadow:0 24px 60px -30px rgba(0,0,0,.9), 0 4px 14px -8px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E131A; --surface:#161D25; --band:#121820; --ink:#E6ECF0; --ink-2:#C3CDD4; --muted:#95A3AD;
+  --line:#26313B; --accent:#54C0C4; --accent-soft:#13302F; --on-accent:#08161A;
+  --dn:#54C0C4; --dn-soft:#13302F; --dn-on:#08161A;
+  --uso:#FF9A4D; --uso-soft:#3A2414; --uso-on:#140A02;
+  --shadow:0 24px 60px -30px rgba(0,0,0,.9), 0 4px 14px -8px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink);
+     font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+     -webkit-text-size-adjust:100%}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--accent)}
+a:focus-visible, button:focus-visible{outline:3px solid var(--accent); outline-offset:2px; border-radius:4px}
+h1,h2,h3{line-height:1.15; letter-spacing:-.02em; margin:0}
+.wrap{max-width:1160px; margin:0 auto; padding:0 24px}
+.vh{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.skip{position:absolute; left:-9999px; top:8px; z-index:20; background:var(--accent); color:var(--on-accent);
+      padding:8px 14px; border-radius:8px; font-weight:650; text-decoration:none}
+.skip:focus{left:16px}
+
+/* ---------------------------------------------------------------- Header */
+.top{position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 86%, transparent);
+     -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.top-in{display:flex; align-items:center; gap:24px; height:64px}
+.brand{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none;
+       font-size:22px; font-weight:750; letter-spacing:-.02em}
+.brand img{width:32px; height:32px}
+.top-right{display:flex; align-items:center; gap:14px; margin-left:auto}
+.langs{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden}
+.langs a{color:var(--muted); text-decoration:none; font-size:13px; font-weight:650; padding:6px 10px}
+.langs a[aria-current="page"]{background:var(--accent); color:var(--on-accent)}
+/* ☀/☾: the side the page shows is in the accent colour, the side chosen by hand is filled. */
+.theme-switch{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden}
+.theme-switch[hidden]{display:none}
+.theme-switch button{border:0; background:transparent; color:var(--muted); padding:7px 9px; line-height:0; cursor:pointer;
+  transition:background .15s, color .15s}
+.theme-switch button + button{border-left:1px solid var(--line)}
+.theme-switch svg{width:16px; height:16px; display:block; fill:none; stroke:currentColor; stroke-width:1.9;
+  stroke-linecap:round; stroke-linejoin:round}
+.theme-switch button:hover{background:var(--accent-soft); color:var(--accent)}
+.theme-switch button.shown{color:var(--accent)}
+.theme-switch button[aria-pressed="true"]{background:var(--accent); color:var(--on-accent)}
+.theme-switch button:focus-visible{outline:2px solid var(--accent); outline-offset:-2px; border-radius:0}
+
+/* ---------------------------------------------------------------- Buttons */
+.btn{display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
+     background:var(--accent); color:var(--on-accent); text-decoration:none;
+     font-weight:650; font-size:16px; padding:12px 22px; border-radius:10px; border:1px solid var(--accent);
+     transition:filter .15s, background .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent; color:var(--accent); border-color:var(--line)}
+.btn.ghost:hover{background:var(--accent-soft); filter:none}
+.btn.small{font-size:14px; padding:7px 14px; border-radius:8px}
+.btn.two{line-height:1.25; padding:9px 22px}
+.btn.two small{font-size:13px; font-weight:550; opacity:.85}
+
+/* ---------------------------------------------------------------- Hero */
+.hero{padding:76px 0 40px; text-align:center;
+      background:radial-gradient(640px 360px at 22% 0%, var(--dn-soft), transparent 70%),
+                 radial-gradient(640px 360px at 78% 0%, var(--uso-soft), transparent 70%)}
+.kicker{color:var(--muted); font-weight:700; font-size:14px; letter-spacing:.06em; text-transform:uppercase; margin:0 0 14px}
+h1{font-size:clamp(2.1rem, 5vw, 3.4rem); font-weight:780; letter-spacing:-.03em; max-width:16em; margin:0 auto}
+/* the key words in both products' colours, as in the avatar's dot */
+h1 em{font-style:normal; color:var(--dn);
+      background:linear-gradient(90deg, var(--dn), var(--uso)); -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent}
+.lead{font-size:1.15rem; color:var(--ink-2); margin:20px auto 0; max-width:36em}
+
+/* ---------------------------------------------------------------- The two products */
+.products{padding:28px 0 88px}
+.pair{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; max-width:1040px; margin:0 auto;
+      list-style:none; padding:0}
+.product{--accent:var(--dn); --accent-soft:var(--dn-soft); --on-accent:var(--dn-on);
+         display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
+         border-top:4px solid var(--accent); border-radius:var(--radius); padding:30px 30px 26px; box-shadow:var(--shadow)}
+.product.uso{--accent:var(--uso); --accent-soft:var(--uso-soft); --on-accent:var(--uso-on)}
+.product h2{display:flex; align-items:center; gap:14px; min-height:56px; margin:0}
+.product .icon{width:52px; height:52px; flex:none}
+.product picture{min-width:0; flex:1}
+.product picture img{width:auto; max-height:30px}
+.what{font-size:1.08rem; color:var(--ink); font-weight:600; line-height:1.45; margin:20px 0 0}
+.does{list-style:none; padding:0; margin:16px 0 26px; display:grid; gap:10px}
+.does li{position:relative; padding-left:32px; color:var(--ink-2); font-size:15.5px; line-height:1.5}
+.does li::before{content:""; position:absolute; left:0; top:2px; width:20px; height:20px; border-radius:50%;
+  background:var(--accent-soft); box-shadow:inset 0 0 0 1.5px var(--accent)}
+.does li::after{content:""; position:absolute; left:6.5px; top:7px; width:7px; height:4px;
+  border:solid var(--accent); border-width:0 0 2px 2px; transform:rotate(-45deg)}
+/* buttons and licence line sit at the foot of the card, so both cards line up */
+.product .ctas{display:flex; gap:12px; flex-wrap:wrap; margin:auto 0 0}
+.product .meta{margin:20px 0 0; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+.product .meta a{color:inherit}
+
+/* ---------------------------------------------------------------- Footer */
+.foot{border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:14.5px; text-align:center}
+.foot b{color:var(--ink)}
+.foot .fine{font-size:13px; max-width:760px; margin:10px auto 0}
+
+/* ---------------------------------------------------------------- Narrow screens */
+@media (max-width:860px){
+  .pair{grid-template-columns:1fr; max-width:600px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .top-in{gap:12px}
+  .top-right{gap:8px}
+  .top-right .btn{display:none}
+  .brand{font-size:20px}
+  .brand img{width:28px; height:28px}
+  .hero{padding:44px 0 28px}
+  .lead{font-size:1.05rem}
+  .products{padding:20px 0 60px}
+  .product{padding:24px 20px 22px}
+  .product h2{gap:12px; min-height:46px}
+  .product .icon{width:44px; height:44px}
+  .product picture img{max-height:24px}
+  .product .ctas .btn{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
