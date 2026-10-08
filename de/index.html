@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>dropnook — zwei Open-Source-Werkzeuge für deinen Heimserver</title>
+<meta name="description" content="dropnook macht zwei kostenlose Open-Source-Werkzeuge für deinen Unraid-Server: Dropnook, Instant-Share fürs Heimnetz, und das Unraid Secretary Office, ein kleines Sekretariat, das sich um deinen Server kümmert. Keine Cloud, kein Konto.">
+<link rel="canonical" href="https://dropnook.app/de/">
+<link rel="alternate" hreflang="en" href="https://dropnook.app/">
+<link rel="alternate" hreflang="de" href="https://dropnook.app/de/">
+<link rel="alternate" hreflang="x-default" href="https://dropnook.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="dropnook">
+<meta property="og:locale" content="de_CH">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="dropnook — zwei Open-Source-Werkzeuge für deinen Heimserver">
+<meta property="og:description" content="Dropnook — Instant-Share fürs Heimnetz. Unraid Secretary Office — ein kleines Sekretariat für deinen Unraid-Server. Kostenlos und Open Source.">
+<meta property="og:url" content="https://dropnook.app/de/">
+<meta property="og:image" content="https://dropnook.app/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="dropnook — Dropnook und Unraid Secretary Office, zwei Open-Source-Werkzeuge für deinen Heimserver">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F7F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E131A" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="icon" href="../icon.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script src="../lang.js"></script>
+<script src="../theme.js"></script>
+<link rel="stylesheet" href="../site.css">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://dropnook.app/#org",
+   "name": "dropnook",
+   "url": "https://dropnook.app/",
+   "logo": "https://dropnook.app/icon.png",
+   "sameAs": [
+    "https://github.com/dropnook"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://dropnook.app/#site",
+   "name": "dropnook",
+   "url": "https://dropnook.app/",
+   "inLanguage": [
+    "en",
+    "de"
+   ],
+   "publisher": {
+    "@id": "https://dropnook.app/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://dropnook.app/de/#page",
+   "url": "https://dropnook.app/de/",
+   "name": "dropnook — zwei Open-Source-Werkzeuge für deinen Heimserver",
+   "description": "dropnook macht zwei kostenlose Open-Source-Werkzeuge für deinen Unraid-Server: Dropnook, Instant-Share fürs Heimnetz, und das Unraid Secretary Office, ein kleines Sekretariat, das sich um deinen Server kümmert. Keine Cloud, kein Konto.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://dropnook.app/#site"
+   },
+   "about": [
+    {
+     "@id": "https://dropnook.dropnook.app/#software"
+    },
+    {
+     "@id": "https://uso.dropnook.app/#software"
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://dropnook.dropnook.app/#software",
+   "name": "Dropnook",
+   "description": "Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.",
+   "url": "https://dropnook.dropnook.app/",
+   "applicationCategory": "UtilitiesApplication",
+   "applicationSubCategory": "File sharing",
+   "operatingSystem": "Linux (Docker), Unraid",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "codeRepository": "https://github.com/dropnook/dropnook.app",
+   "image": "https://dropnook.dropnook.app/social-preview.png",
+   "author": {
+    "@id": "https://dropnook.app/#org"
+   },
+   "publisher": {
+    "@id": "https://dropnook.app/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://uso.dropnook.app/#software",
+   "name": "Unraid Secretary Office",
+   "alternateName": "USO",
+   "description": "Ein kleines Sekretariat für deinen Unraid-Server — ein Team von Figuren, jede kümmert sich um einen Teil davon.",
+   "url": "https://uso.dropnook.app/",
+   "applicationCategory": "UtilitiesApplication",
+   "applicationSubCategory": "Server administration",
+   "operatingSystem": "Unraid 7.3.2 or newer 7.x",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+   "codeRepository": "https://github.com/dropnook/UnraidSecretaryOffice",
+   "image": "https://uso.dropnook.app/social-preview.png",
+   "author": {
+    "@id": "https://dropnook.app/#org"
+   },
+   "publisher": {
+    "@id": "https://dropnook.app/#org"
+   }
+  }
+ ]
+}</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="https://dropnook.app/de/" class="brand" aria-label="dropnook — Übersicht"><img src="../icon.svg" width="32" height="32" alt="">dropnook</a>
+    <div class="top-right">
+      <nav class="langs" aria-label="Sprache">
+        <a href="https://dropnook.app/" hreflang="en" lang="en">EN</a><a href="https://dropnook.app/de/" hreflang="de" lang="de" aria-current="page">DE</a>
+      </nav>
+      <div class="theme-switch" id="theme-switch" role="group" hidden data-auto="Darstellung: automatisch" data-again="nochmals klicken für automatisch">
+        <button type="button" data-mode="light" data-label="Darstellung: hell"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></button><button type="button" data-mode="dark" data-label="Darstellung: dunkel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      </div>
+      <a class="btn small ghost" href="https://github.com/dropnook" aria-label="dropnook auf GitHub">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Kostenlos &amp; Open Source · gemacht für Unraid</p>
+    <h1>Zwei kleine Werkzeuge für deinen <em>Heimserver</em></h1>
+    <p class="lead">Beide laufen auf deinem eigenen Server, brauchen kein Konto und schicken nichts in eine Cloud. Nimm das, was du brauchst — oder beide.</p>
+  </div>
+</section>
+
+<section class="products" aria-label="Die zwei Produkte">
+  <div class="wrap">
+    <ul class="pair">
+      <li class="product dn">
+        <h2><img class="icon" src="../logos/dropnook-icon.svg" width="52" height="52" alt=""><picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../logos/dropnook-title-dark.svg">
+          <img src="../logos/dropnook-title-light.svg" width="228" height="60" alt="Dropnook">
+        </picture></h2>
+        <p class="what">Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.</p>
+        <ul class="does">
+          <li>Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät.</li>
+          <li>Alles im Browser: keine App zum Installieren, kein Login, keine Cloud.</li>
+          <li>Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.</li>
+        </ul>
+        <p class="ctas">
+          <a class="btn two" href="https://dropnook.dropnook.app/de/"><span>Zur Webseite</span><small>dropnook.dropnook.app</small></a>
+          <a class="btn ghost" href="https://github.com/dropnook/dropnook.app">GitHub</a>
+        </p>
+        <p class="meta"><a href="https://github.com/dropnook/dropnook.app/blob/main/LICENSE">AGPL-3.0</a> · kostenlos, Open Source, gemacht für Unraid</p>
+      </li>
+      <li class="product uso">
+        <h2><img class="icon" src="../logos/uso-icon.svg" width="52" height="52" alt=""><picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../logos/uso-title-dark.svg">
+          <img src="../logos/uso-title-light.svg" width="580" height="60" alt="Unraid Secretary Office">
+        </picture></h2>
+        <p class="what">Ein kleines Sekretariat für deinen Unraid-Server — ein Team von Figuren, jede kümmert sich um einen Teil davon.</p>
+        <ul class="does">
+          <li>Snapshots und die nächtliche Sicherung, mit einer Übung, die beweist, dass sie zurückkommt.</li>
+          <li>Protokolle, eine Nachtwache für die Sicherheit und Aufräumen, was niemand mehr braucht.</li>
+          <li>Ein Plugin für Unraid 7, hinter Unraids Login — keine Cloud, kein Konto.</li>
+        </ul>
+        <p class="ctas">
+          <a class="btn two" href="https://uso.dropnook.app/de/"><span>Zur Webseite</span><small>uso.dropnook.app</small></a>
+          <a class="btn ghost" href="https://github.com/dropnook/UnraidSecretaryOffice">GitHub</a>
+        </p>
+        <p class="meta"><a href="https://github.com/dropnook/UnraidSecretaryOffice/blob/main/LICENSE">GPL-3.0-or-later</a> · kostenlos, Open Source, gemacht für Unraid</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 <b>dropnook</b>
+      · <a href="https://github.com/dropnook">GitHub</a>
+      · <a href="https://dropnook.dropnook.app/de/">Dropnook</a>
+      · <a href="https://uso.dropnook.app/de/">Unraid Secretary Office</a></p>
+    <p class="fine">Unraid ist eine Marke der Lime Technology, Inc.; AirDrop ist eine Marke der Apple Inc. Beide Projekte sind unabhängig und mit keiner der beiden Firmen verbunden. Diese Seite setzt keine Cookies und lädt nichts von Dritten.</p>
+  </div>
+</footer>
+</body>
+</html>
