@@ -1,0 +1,14 @@
+# dropnook.app
+
+> Two helpful tools for your home server. Both run on your own server, need no account and send nothing to a cloud. Take the one you need — or both.
+
+dropnook makes free, open-source tools for the home server, made for Unraid. German: https://dropnook.app/de/ · the full list: https://dropnook.app/llms-full.txt
+
+## Products
+
+- [Dropnook](https://dropnook.dropnook.app/): Instant sharing for your home network — like AirDrop, but for every device and every system. Code: https://github.com/dropnook/dropnook.app (AGPL-3.0)
+- [Unraid Secretary Office](https://uso.dropnook.app/): A whole team supports you in running your Unraid server — ten characters, each looking after one part of it. Code: https://github.com/dropnook/UnraidSecretaryOffice (GPL-3.0-or-later)
+
+## From the neighbourhood
+
+- [helminet.ch](https://helminet.ch/): helmi1987's open-source projects (https://helminet.ch/llms-full.txt)

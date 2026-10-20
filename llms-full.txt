@@ -1,0 +1,45 @@
+# dropnook.app
+
+> Two helpful tools for your home server. Both run on your own server, need no account and send nothing to a cloud. Take the one you need — or both.
+
+> Zwei hilfreiche Werkzeuge für deinen Heimserver. Beide laufen auf deinem eigenen Server, brauchen kein Konto und schicken nichts in eine Cloud. Nimm das, was du brauchst — oder beide.
+
+## Eigene Projekte
+
+### Dropnook
+
+Instant sharing for your home network — like AirDrop, but for every device and every system. Drop in text, files or a screenshot — it is on every other device at once. All in the browser: no app to install, no login, no cloud. A Docker container on your own server, in 17 languages.
+
+- Projektseite: https://dropnook.dropnook.app/
+- Quellcode: https://github.com/dropnook/dropnook.app
+- Webseite: https://dropnook.dropnook.app/
+- Sprache: JavaScript
+- Lizenz: AGPL-3.0
+- Letzte Änderung: 2026-10-19
+- Tags: airdrop, airdrop-alternative, dropnook, localsend, localsend-alternative
+- Beschreibung (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System. Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät. Alles im Browser: keine App zum Installieren, kein Login, keine Cloud. Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.
+- Kurz (en): Instant sharing for your home network — like AirDrop, but for every device and every system.
+- Kurz (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.
+- Webseite (de): https://dropnook.dropnook.app/de/
+- Logo: https://dropnook.app/logos/dropnook-icon.svg
+- Logo (Titel, hell): https://dropnook.app/logos/dropnook-title-light.svg
+- Logo (Titel, dunkel): https://dropnook.app/logos/dropnook-title-dark.svg
+
+### Unraid Secretary Office
+
+A whole team supports you in running your Unraid server — ten characters, each looking after one part of it. Mr. Backupsy backs up on your schedule, encrypted off-site with Kopia too; Mr. Restori brings apps, folders and VMs back and drills it regularly; Ms. Snapshotini keeps the snapshots. Ms. Moverelli keeps the pool fast and tidy, Jack Streamer puts ready what plays next in Emby, Jellyfin and Plex. The Night Watchman makes his round every five minutes, Ms. Protocolli brings every log into one place, Ms. Dustdevil clears away what nobody uses any more. The Team Lead suggests whom to hire, the Consultant installs what’s missing with you — a plugin for Unraid 7.3.2 or newer, behind Unraid’s login, no cloud, no account.
+
+- Projektseite: https://uso.dropnook.app/
+- Quellcode: https://github.com/dropnook/UnraidSecretaryOffice
+- Webseite: https://uso.dropnook.app/
+- Sprache: PHP
+- Lizenz: GPL-3.0-or-later
+- Letzte Änderung: 2026-10-20
+- Tags: backup, btrfs, docker, emby-cache, embycache, embychache, homelab, restore, self-hosted, snapshot, snapshots, unraid, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
+- Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, Ordner und VMs zurück und übt es regelmässig; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Der Nachtwächter macht alle fünf Minuten seinen Rundgang, Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login, keine Cloud, kein Konto.
+- Kurz (en): A whole team supports you in running your Unraid server — ten characters, each looking after one part of it.
+- Kurz (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon.
+- Webseite (de): https://uso.dropnook.app/de/
+- Logo: https://dropnook.app/logos/uso-icon.svg
+- Logo (Titel, hell): https://dropnook.app/logos/uso-title-light.svg
+- Logo (Titel, dunkel): https://dropnook.app/logos/uso-title-dark.svg

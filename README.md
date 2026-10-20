@@ -35,6 +35,7 @@ Plain static files, no build step (the neighbourhood cards are refreshed by a sm
 | `icon.svg`, `icon.png`, `apple-touch-icon.png`, `favicon.ico` | The dropnook avatar (from the GitHub profile), rounded for the tab; the PNGs and the ICO are renders of it. |
 | `social-preview.png` | 1200×630 card with both names, rendered from a small HTML card in headless Chrome. |
 | `robots.txt`, `sitemap.xml` | For search engines; the sitemap lists `/` and `/de/` with hreflang. |
+| `llms.txt`, `llms-full.txt` | For AI search and for helminet.ch: both products in the layout of helminet's own `llms-full.txt` (German description, logos as extra keys). Written by `tools/build-llms.py` from the product cards and GitHub (language, topics, last push) — edit the cards, never these files; the daily workflow rewrites them. |
 
 The pages carry canonical and hreflang links (en, de, x-default), Open Graph tags and schema.org JSON-LD: the
 `Organization` dropnook, the `WebSite`, the `WebPage`, and one `SoftwareApplication` per product. The two

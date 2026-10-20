@@ -1,6 +1,7 @@
-# Once a day (and by hand): the cards «From the neighbourhood» from helminet.ch — tools/import-helminet.py.
-# Commits only when helminet.ch changed something; the run's summary names new, gone and changed projects.
-name: helminet neighbourhood
+# Once a day (and by hand): the cards «From the neighbourhood» from helminet.ch (tools/import-helminet.py), then
+# llms.txt / llms-full.txt from the product cards and GitHub (tools/build-llms.py). Commits only when something
+# changed; the run's summary names new, gone and changed projects.
+name: daily refresh
 on:
   schedule:
     - cron: "17 5 * * *"
@@ -15,10 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Import
         run: python3 tools/import-helminet.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: llms.txt
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/build-llms.py | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Commit
         run: |
-          git diff --quiet && exit 0
+          git add -A llms.txt llms-full.txt index.html de/index.html
+          git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -qam "Neighbourhood: helminet.ch's projects as of $(date -u +%F)"
+          git commit -qm "Daily refresh: helminet.ch's projects and llms.txt as of $(date -u +%F)"
           git push
