@@ -1,5 +1,6 @@
 {
   "order": [
+    "bierkasse",
     "babyphone-cam",
     "tapo-snapshot-catcher",
     "gotify-bark",
@@ -73,6 +74,13 @@
       "meta_de": "PowerShell · 2016",
       "meta_en": "PowerShell · 2016",
       "upstream": "Powershell scripts"
+    },
+    "bierkasse": {
+      "de": "Die Bierkasse fürs Büro, digital statt Strichliste und Münzdose: Bier abstreichen, Guthaben bar oder per TWINT aufladen, der Kassier bestätigt — mit Lagerstand und Statistik, als App auf dem Handy.",
+      "en": "The office beer fund, digital instead of a tally sheet and a coin box: tick off a beer, top up in cash or with TWINT, the treasurer confirms — with stock and statistics, as an app on your phone.",
+      "meta_de": "PHP · Laravel · App fürs Handy (PWA)",
+      "meta_en": "PHP · Laravel · phone app (PWA)",
+      "upstream": "Schluss mit Strichliste und Münzdose: Unsere Bierkasse fürs Büro ist jetzt digital. 🍺 Bier abstreichen, Guthaben bar oder per TWINT aufladen, der Kassier bestätigt – mit Lagerstand und Statistik. Läuft als App auf dem Handy."
     }
   }
 }
