@@ -17,9 +17,10 @@ The cards come from helminet.ch itself: `tools/import-helminet.py` reads https:/
 own projects) and writes them between `<!-- helminet:start -->` and `<!-- helminet:end -->` in both pages; the
 workflow `.github/workflows/helminet.yml` runs it every morning and commits when helminet.ch changed. Links,
 licence and language always come from there; our own German and English sentence per project lives in
-`neighbours/helminet.json` (with the description it was written from, `upstream`). A new project appears first with
-helminet's English description in both pages until it gets its sentences there; a project helminet.ch drops leaves
-the page. Run it by hand with `python3 tools/import-helminet.py` (`--check` only tells whether anything would change).
+`neighbours/helminet.json` (with the description it was written from, `upstream`). The newest first, by the last commit (helminet's
+«Letzte Änderung» for the day, the commit time from GitHub within it — never `pushed_at`, which moves with any push). A
+new project shows helminet's English description in both pages until it gets its sentences there; a project
+helminet.ch drops leaves the page. Run it by hand with `python3 tools/import-helminet.py` (`--check` only tells whether anything would change).
 
 ## What is here
 

@@ -2,7 +2,7 @@
 """Writes llms.txt and llms-full.txt for dropnook.app from the two product cards of the pages.
 
 The cards (li.product in index.html and de/index.html) are the one source of the words: what each product is, what
-it does, its site, its code and its licence. GitHub adds the language, the topics and the last push. llms-full.txt
+it does, its site, its code and its licence. GitHub adds the language, the topics and the time of the last commit on the default branch (never pushed_at). llms-full.txt
 uses the same layout as helminet.ch's (### name, a description, then «- Key: value» lines), so a reader of one reads
 the other; our extra keys (German description, logos) come after the shared ones.
 
@@ -62,11 +62,18 @@ def github(repo_url):
         return json.load(r)
 
 
+def last_commit(repo_url, branch):
+    repo = repo_url.removeprefix("https://github.com/").strip("/")
+    return github(f"https://github.com/{repo}/commits/{branch}")["commit"]["committer"]["date"]
+
+
 def build():
     head_en, en = cards(PAGES["en"])
     head_de, de = cards(PAGES["de"])
     assert [c["key"] for c in en] == [c["key"] for c in de], "the two pages list different products"
     gh = {c["key"]: github(c["code"]) for c in en}
+    for c in en:                        # the last commit, not pushed_at (any push to any branch moves that)
+        gh[c["key"]]["committed"] = last_commit(c["code"], gh[c["key"]]["default_branch"])
 
     short = [f"# dropnook.app", "", f"> {head_en['h1']}. {head_en['lead']}", "",
              f"dropnook makes free, open-source tools for the home server, made for Unraid. "
@@ -86,7 +93,8 @@ def build():
                  f"- Webseite: {c['site']}",
                  f"- Sprache: {g.get('language') or '-'}",
                  f"- Lizenz: {c['licence']}",
-                 f"- Letzte Änderung: {(g.get('pushed_at') or '')[:10]}",
+                 f"- Letzte Änderung: {g['committed'][:10]}",
+                 f"- Letzter Commit: {g['committed']}",
                  f"- Tags: {', '.join(g.get('topics') or [])}",
                  f"- Beschreibung (de): {d['what']} {' '.join(d['does'])}",
                  f"- Kurz (en): {c['what']}",

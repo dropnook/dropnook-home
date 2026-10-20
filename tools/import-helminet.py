@@ -6,9 +6,14 @@ ones are dropnook's two products, already on this page) and writes the cards bet
 <!-- helminet:start --> and <!-- helminet:end --> in index.html and de/index.html.
 
 neighbours/helminet.json holds what helminet.ch can't say: our own German and English sentence and meta line per
-project, and the order. A project helminet.ch lists that we have no sentence for yet appears first, with helminet's
-own description in both languages; a project helminet.ch no longer lists leaves the page. Links (project page, site,
-code), the licence and the language always come from helminet.ch.
+project. A project helminet.ch lists that we have no sentence for yet shows helminet's own description in both
+languages; a project helminet.ch no longer lists leaves the page. Links (project page, site, code), the licence and
+the language always come from helminet.ch.
+
+The newest first, by the last commit (date and time, as helminet.ch sorts — never GitHub's pushed_at, which moves
+with any push to any branch): helminet's «Letzte Änderung» gives the day; for a project with its code on GitHub the
+time of the last commit on its default branch decides within the day (GitHub's public API, two calls per project; a
+project without public code, or when GitHub doesn't answer, counts as the start of its day).
 
     python3 tools/import-helminet.py            # fetch, write the pages
     python3 tools/import-helminet.py --check    # fetch, exit 1 if the pages would change (nothing written)
@@ -43,6 +48,26 @@ def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "dropnook.app neighbourhood importer"})
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.read(1_000_000).decode("utf-8")
+
+
+def last_commit(code_url):
+    """ISO time of the last commit on the default branch of a public GitHub repository, or None."""
+    m = re.match(r"^https://github\.com/([\w.-]+)/([\w.-]+?)(?:\.git)?/?$", code_url or "")
+    if not m:
+        return None
+    api = f"https://api.github.com/repos/{m.group(1)}/{m.group(2)}"
+    try:
+        def get(url):
+            req = urllib.request.Request(url, headers={"User-Agent": "dropnook.app neighbourhood importer",
+                                                       "Accept": "application/vnd.github+json"})
+            if os.environ.get("GITHUB_TOKEN"):
+                req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return json.load(r)
+        branch = get(api)["default_branch"]
+        return get(f"{api}/commits/{branch}")["commit"]["committer"]["date"]
+    except Exception:                   # noqa: BLE001 — no time: the start of its day
+        return None
 
 
 def parse(text):
@@ -116,8 +141,12 @@ def main():
     curated = data.get("projects", {})
     known = [s for s in data.get("order", []) if s in curated]
     by_slug = {p["slug"]: p for p in projects}
-    new = sorted((p for p in projects if p["slug"] not in curated), key=lambda p: p.get("changed", ""), reverse=True)
-    order = [p["slug"] for p in new] + [s for s in known if s in by_slug]
+    new = [p for p in projects if p["slug"] not in curated]
+    for p in projects:
+        p["committed"] = last_commit(p.get("code", ""))
+    rank = {s: i for i, s in enumerate(known)}
+    order = [p["slug"] for p in sorted(projects, key=lambda p: (p.get("changed", ""), p["committed"] or "",
+                                                                 -rank.get(p["slug"], -1)), reverse=True)]
 
     for p in new:
         print(f"helminet: new project «{p['name']}» — shown with helminet's description; add our sentences to "

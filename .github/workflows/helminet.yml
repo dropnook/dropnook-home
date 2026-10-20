@@ -15,6 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Import
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: python3 tools/import-helminet.py | tee -a "$GITHUB_STEP_SUMMARY"
       - name: llms.txt
         env:
