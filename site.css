@@ -116,6 +116,36 @@ h1 em{font-style:normal; color:var(--dn);
 .product .meta{margin:20px 0 0; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
 .product .meta a{color:inherit}
 
+/* ---------------------------------------------------------------- From the neighbourhood
+   helmi1987's projects, the other way round from Helminet listing ours. Quieter than the two
+   products: on the band, smaller cards, no accent of their own (the links and buttons in ink).
+   Logo and icon are copies in logos/, nothing is loaded from helminet.ch. */
+.neighbours{background:var(--band); border-top:1px solid var(--line); padding:64px 0 76px}
+.nb-head{max-width:1040px; margin:0 auto; text-align:center}
+.nb-head h2{font-size:clamp(1.6rem, 3.2vw, 2.1rem); font-weight:760}
+.nb-lead{color:var(--ink-2); font-size:1.05rem; margin:12px auto 0; max-width:34em}
+.nb-from{display:flex; align-items:center; gap:22px; max-width:1040px; margin:34px auto 0;
+         color:var(--ink-2); font-size:15.5px}
+.nb-from p{margin:0}
+.nb-from a{color:var(--ink)}
+.nb-logo{flex:none; display:block; border-radius:6px}
+.nb-logo img{width:auto; height:44px}
+.nb-grid{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:18px; max-width:1040px; margin:24px auto 0;
+      list-style:none; padding:0}
+.mini{--accent:var(--ink); --accent-soft:var(--bg);
+      display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
+      border-radius:12px; padding:20px 22px 18px}
+.mini h3{font-size:1.08rem; font-weight:700; letter-spacing:-.01em; overflow-wrap:anywhere}
+.mini h3 a{color:var(--ink); text-decoration:none}
+.mini h3 a:hover{text-decoration:underline}
+.mini > p{color:var(--ink-2); font-size:15px; line-height:1.5; margin:10px 0 18px}
+.mini .ctas{display:flex; gap:10px; flex-wrap:wrap; margin:auto 0 0}
+.mini .meta{margin:16px 0 0; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+.nb-all{text-align:center; margin:30px 0 0; font-weight:650}
+.nb-all a{display:inline-flex; align-items:center; gap:9px; color:var(--ink); text-decoration:none}
+.nb-all a:hover{text-decoration:underline}
+.nb-all img{width:20px; height:20px}
+
 /* ---------------------------------------------------------------- Footer */
 .foot{border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:14.5px; text-align:center}
 .foot b{color:var(--ink)}
@@ -124,6 +154,8 @@ h1 em{font-style:normal; color:var(--dn);
 /* ---------------------------------------------------------------- Narrow screens */
 @media (max-width:860px){
   .pair{grid-template-columns:1fr; max-width:600px}
+  .nb-grid{grid-template-columns:1fr; max-width:600px}
+  .nb-from{max-width:600px}
 }
 @media (max-width:620px){
   body{font-size:16px}
@@ -144,5 +176,9 @@ h1 em{font-style:normal; color:var(--dn);
   /* the site's button takes the room, GitHub keeps its size: the same in both cards */
   .product .ctas{display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:10px}
   .product .ctas .btn{padding-left:14px; padding-right:14px}
+  .neighbours{padding:44px 0 52px}
+  .nb-from{flex-direction:column; align-items:flex-start; gap:12px; margin-top:26px}
+  .nb-logo img{height:36px}
+  .mini{padding:18px 18px 16px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}

@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script src="lang.js"></script>
 <script src="theme.js"></script>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=2">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@graph": [
@@ -152,7 +152,7 @@
 <section class="hero">
   <div class="wrap">
     <p class="kicker">Free &amp; open source</p>
-    <h1>Two small tools for your <em>home server</em></h1>
+    <h1>Two helpful tools for your <em>home server</em></h1>
     <p class="lead">Both run on your own server, need no account and send nothing to a cloud. Take the one you need — or both.</p>
   </div>
 </section>
@@ -198,6 +198,101 @@
   </div>
 </section>
 
+<section class="neighbours" aria-labelledby="nb-title">
+  <div class="wrap">
+    <div class="nb-head">
+      <h2 id="nb-title">From the neighbourhood</h2>
+      <p class="nb-lead">Not by dropnook, but from the same corner.</p>
+    </div>
+    <div class="nb-from">
+      <a class="nb-logo" href="https://helminet.ch/" aria-label="helminet.ch"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="logos/helminet-wide-dark.svg">
+        <img src="logos/helminet-wide-light.svg" width="800" height="200" alt="Helminet">
+      </picture></a>
+      <p>On <a href="https://helminet.ch/">helminet.ch</a> you'll find helmi1987's projects, which I support — have a look!</p>
+    </div>
+    <ul class="nb-grid">
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/babyphone-cam">babyphone-cam</a></h3>
+        <p>A baby monitor in the browser for your home network: camera and microphone right in the browser, one Docker container — no app, no cloud, nothing recorded.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://babyphone.helminet.ch/">Visit the site</a>
+          <a class="btn small ghost" href="https://github.com/helmi1987/babyphone-cam">GitHub</a>
+        </p>
+        <p class="meta">AGPL-3.0 · JavaScript · Docker</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/tapo-snapshot-catcher">tapo_snapshot_catcher</a></h3>
+        <p>Takes snapshots from your Tapo cameras, shared ones too, through the Tapo cloud and uploads the latest image and an archive over SFTP. If something sticks, Gotify tells you.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://helminet.ch/projekte/tapo-snapshot-catcher">On helminet.ch</a>
+        </p>
+        <p class="meta">AGPL-3.0 · Python · Docker · code on request</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/gotify-bark">gotify-bark</a></h3>
+        <p>A Gotify plugin that passes your messages on to Bark on your iPhone. The priority decides whether they arrive quietly or break through as a critical alert — and messages that are too long get shortened instead of lost.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://github.com/helmi1987/gotify-bark">GitHub</a>
+        </p>
+        <p class="meta">MIT · Go · a fork of p3ddd/gotify-bark</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/firestorm-certwarden">firestorm_certwarden</a></h3>
+        <p>Two scripts for Cert Warden: Let's Encrypt certificates via DNS-01 challenge for domains hosted at FireStorm — issued and renewed without opening a port.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://github.com/helmi1987/firestorm_certwarden">GitHub</a>
+        </p>
+        <p class="meta">Shell · for Cert Warden in a Docker container</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/firestorm-mikrotik-dyndns">firestorm_mikrotik_dyndns</a></h3>
+        <p>A DynDNS script for MikroTik RouterOS: keeps your domain's A record at FireStorm on the current WAN IP — and only asks the API when something has actually changed.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://github.com/helmi1987/firestorm_mikrotik_dyndns">GitHub</a>
+        </p>
+        <p class="meta">RouterOS script · RouterOS 7.13 or newer</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/ansible-mikrotik-fullbackup">ansible_mikrotik_fullbackup</a></h3>
+        <p>An Ansible playbook that pulls a full backup from your MikroTik routers: binary backup and rsc export, through a RAM disk instead of the flash.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://github.com/helmi1987/ansible_mikrotik_fullbackup">GitHub</a>
+        </p>
+        <p class="meta">Ansible · no RouterOS modules, just ssh and scp</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/wettertessin-homepage">wettertessin_homepage</a></h3>
+        <p>The weather station at Camping Paradiso in Melano on Lake Lugano: temperature, rain, wind, lake temperature and webcam — in German, Italian, French and English.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://wettertessin.helminet.ch/">Visit the site</a>
+        </p>
+        <p class="meta">PHP · Laravel 13 · code on request</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/helminet-webpage">helminet_webpage</a></h3>
+        <p>The site behind helminet.ch itself: a collection of own and supported projects, with GitHub sync, logos, visitor stats and a contact form.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://helminet.ch/projekte/helminet-webpage">On helminet.ch</a>
+        </p>
+        <p class="meta">PHP · Laravel 13 · code on request</p>
+      </li>
+      <li class="mini">
+        <h3><a href="https://helminet.ch/projekte/soundtouch">SoundTouch</a></h3>
+        <p>PowerShell scripts for SoundTouch speakers — an older project from 2016.</p>
+        <p class="ctas">
+          <a class="btn small ghost" href="https://github.com/helmi1987/SoundTouch">GitHub</a>
+        </p>
+        <p class="meta">PowerShell · 2016</p>
+      </li>
+    </ul>
+    <p class="nb-all"><a href="https://helminet.ch/"><picture>
+      <source media="(prefers-color-scheme: dark)" srcset="logos/helminet-icon-dark.svg">
+      <img src="logos/helminet-icon-light.svg" width="20" height="20" alt="">
+    </picture>All projects on helminet.ch</a></p>
+  </div>
+</section>
+
 </main>
 
 <footer class="foot">
@@ -205,8 +300,9 @@
     <p>© 2026 <b>dropnook</b>
       · <a href="https://github.com/dropnook">GitHub</a>
       · <a href="https://dropnook.dropnook.app/">Dropnook</a>
-      · <a href="https://uso.dropnook.app/">Unraid Secretary Office</a></p>
-    <p class="fine">Unraid is a trademark of Lime Technology, Inc.; AirDrop is a trademark of Apple Inc. Both projects are independent and not affiliated with either company. This site sets no cookies and loads nothing from third parties.</p>
+      · <a href="https://uso.dropnook.app/">Unraid Secretary Office</a>
+      · <a href="https://helminet.ch/">Helminet</a></p>
+    <p class="fine">Unraid is a trademark of Lime Technology, Inc.; AirDrop is a trademark of Apple Inc. Both projects are independent and not affiliated with either company. Helminet is an independent project by helmi1987; the logo and project descriptions come from helminet.ch. This site sets no cookies and loads nothing from third parties.</p>
   </div>
 </footer>
 </body>
