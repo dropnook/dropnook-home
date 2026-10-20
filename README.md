@@ -8,14 +8,22 @@ server and sends you on to their own sites.
 | **Dropnook** — instant sharing for your home network | https://dropnook.dropnook.app/ | [dropnook/dropnook.app](https://github.com/dropnook/dropnook.app) | AGPL-3.0 |
 | **Unraid Secretary Office** — a whole team for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
 
-Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the nine projects
+Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the projects
 from [helminet.ch](https://helminet.ch/), helmi1987's collection of their own open-source projects (which in turn
 lists Dropnook and the office), with Benj's own line of introduction. Helminet is an independent
 project; the descriptions are shortened from helminet.ch, the logo is a copy in `logos/`.
 
+The cards come from helminet.ch itself: `tools/import-helminet.py` reads https://helminet.ch/llms-full.txt (helmi1987's
+own projects) and writes them between `<!-- helminet:start -->` and `<!-- helminet:end -->` in both pages; the
+workflow `.github/workflows/helminet.yml` runs it every morning and commits when helminet.ch changed. Links,
+licence and language always come from there; our own German and English sentence per project lives in
+`neighbours/helminet.json` (with the description it was written from, `upstream`). A new project appears first with
+helminet's English description in both pages until it gets its sentences there; a project helminet.ch drops leaves
+the page. Run it by hand with `python3 tools/import-helminet.py` (`--check` only tells whether anything would change).
+
 ## What is here
 
-Plain static files, no build step, nothing loaded from third parties, no cookies.
+Plain static files, no build step (the neighbourhood cards are refreshed by a small script, see above), nothing loaded from third parties, no cookies.
 
 | File | What it is |
 |---|---|

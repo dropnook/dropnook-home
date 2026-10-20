@@ -1,0 +1,24 @@
+# Once a day (and by hand): the cards «From the neighbourhood» from helminet.ch — tools/import-helminet.py.
+# Commits only when helminet.ch changed something; the run's summary names new, gone and changed projects.
+name: helminet neighbourhood
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: helminet
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import
+        run: python3 tools/import-helminet.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qam "Neighbourhood: helminet.ch's projects as of $(date -u +%F)"
+          git push
