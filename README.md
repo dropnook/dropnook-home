@@ -20,7 +20,9 @@ licence and language always come from there; our own German and English sentence
 `neighbours/helminet.json` (with the description it was written from, `upstream`). The newest first, by the last commit (helminet's
 «Letzte Änderung» for the day, the commit time from GitHub within it — never `pushed_at`, which moves with any push). A
 new project shows helminet's English description in both pages until it gets its sentences there; a project
-helminet.ch drops leaves the page. Run it by hand with `python3 tools/import-helminet.py` (`--check` only tells whether anything would change).
+helminet.ch drops leaves the page. Run it by hand with `python3 tools/import-helminet.py` (`--check` only tells whether anything would change). Each card shows the project's logo and preview picture from its page on helminet.ch, copied into
+`neighbours/img/` (checked: PNG/JPEG/WebP by their first bytes, SVG without scripts or external references; size caps) —
+a project without a preview gets the same space with its logo in the middle.
 
 ## What is here
 

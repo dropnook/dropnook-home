@@ -135,7 +135,12 @@ h1 em{font-style:normal; color:var(--dn);
 .mini{--accent:var(--ink); --accent-soft:var(--bg);
       display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
       border-radius:12px; padding:20px 22px 18px}
-.mini h3{font-size:1.08rem; font-weight:700; letter-spacing:-.01em; overflow-wrap:anywhere}
+.mini h3{font-size:1.08rem; font-weight:700; letter-spacing:-.01em; overflow-wrap:anywhere; display:flex; align-items:center; gap:10px}
+.mini-logo{width:28px; height:28px; flex:none; border-radius:6px; object-fit:contain}
+.mini-banner{display:block; width:calc(100% + 44px); max-width:none; height:auto; aspect-ratio:8/3; object-fit:cover;
+      margin:-20px -22px 16px; border-radius:11px 11px 0 0; border-bottom:1px solid var(--line); background:var(--bg)}
+.mini-banner-logo{display:flex; align-items:center; justify-content:center}
+.mini-banner-logo img{width:72px; height:72px; object-fit:contain; border-radius:14px}
 .mini h3 a{color:var(--ink); text-decoration:none}
 .mini h3 a:hover{text-decoration:underline}
 .mini > p{color:var(--ink-2); font-size:15px; line-height:1.5; margin:10px 0 18px}
@@ -180,5 +185,6 @@ h1 em{font-style:normal; color:var(--dn);
   .nb-from{flex-direction:column; align-items:flex-start; gap:12px; margin-top:26px}
   .nb-logo img{height:36px}
   .mini{padding:18px 18px 16px}
+  .mini-banner{width:calc(100% + 36px); margin:-18px -18px 14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}

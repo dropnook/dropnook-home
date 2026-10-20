@@ -19,6 +19,12 @@ project without public code, or when GitHub doesn't answer, counts as the start 
     python3 tools/import-helminet.py --check    # fetch, exit 1 if the pages would change (nothing written)
     python3 tools/import-helminet.py --file F   # read a saved llms-full.txt instead of fetching
 
+Pictures: each project page on helminet.ch names its logo and its preview picture (the repository's social preview,
+og:image) under /projekt-medien/. They are copied into neighbours/img/ (the page loads nothing from other hosts),
+checked first: a PNG, JPEG or WebP by its first bytes, an SVG only without script, event handlers or external
+references, at most 300 KB (logo) and 1.5 MB (preview). A picture that can't be fetched keeps the copy there; a project
+without one shows none.
+
 Standard library only. Everything from helminet.ch is escaped; only http(s) links are used. When the fetch fails or
 the feed lists no project, nothing is written (exit 2) — the page keeps its cards.
 """
@@ -99,8 +105,81 @@ def parse(text):
     return projects
 
 
-def card(p, cur, lang):
+IMG_DIR = os.path.join(ROOT, "neighbours", "img")
+MEDIA = re.compile(r"^/projekt-medien/\d+/[\w.-]+\.(svg|png|webp|jpe?g)$")
+IMG_MAX = {"logo": 300_000, "banner": 1_500_000}
+
+
+def picture_ok(data, ext):
+    if ext == "png":
+        return data.startswith(b"\x89PNG\r\n\x1a\n")
+    if ext in ("jpg", "jpeg"):
+        return data.startswith(b"\xff\xd8\xff")
+    if ext == "webp":
+        return data[:4] == b"RIFF" and data[8:12] == b"WEBP"
+    if ext == "svg":
+        try:
+            t = data.decode("utf-8").lower()
+        except UnicodeDecodeError:
+            return False
+        return "<svg" in t and not re.search(r"<script|<foreignobject|\son\w+\s*=|javascript:|xlink:href\s*=\s*[\"']?(https?:|//)|href\s*=\s*[\"']?(https?:|//)|<!entity", t)
+    return False
+
+
+def fetch_bytes(url, limit):
+    req = urllib.request.Request(url, headers={"User-Agent": "dropnook.app neighbourhood importer"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        data = r.read(limit + 1)
+    return data if len(data) <= limit else None
+
+
+def pictures(slug):
+    """{kind: file name in neighbours/img} — fetched anew when helminet.ch answers, else the copies there."""
+    found = {}
+    try:
+        page = fetch(f"https://helminet.ch/projekte/{slug}")
+    except Exception:                   # noqa: BLE001 — keep what is there
+        page = ""
+    want = {}
+    m = re.search(r'<meta property="og:image" content="https://helminet\.ch(/projekt-medien/[^"]+)"', page)
+    if m and MEDIA.match(m.group(1)) and "banner" in m.group(1).rsplit("/", 1)[-1]:
+        want["banner"] = m.group(1)    # a project without a preview has its logo (or the owner's avatar) as og:image
+    for src in re.findall(r'<img src="(/projekt-medien/[^"]+)"', page):
+        name = src.rsplit("/", 1)[-1]
+        if MEDIA.match(src) and re.match(r"^(gh-)?logo[-\w]*\.", name) and "dark" not in name:
+            want["logo"] = src
+            break
+    os.makedirs(IMG_DIR, exist_ok=True)
+    for kind in ("logo", "banner"):
+        old = [f for f in os.listdir(IMG_DIR) if f.startswith(f"{slug}-{kind}.")]
+        if kind in want:
+            ext = want[kind].rsplit(".", 1)[-1].lower()
+            name = f"{slug}-{kind}.{ext}"
+            try:
+                data = fetch_bytes("https://helminet.ch" + want[kind], IMG_MAX[kind])
+            except Exception:           # noqa: BLE001
+                data = None
+            if data and picture_ok(data, ext):
+                path = os.path.join(IMG_DIR, name)
+                if not os.path.exists(path) or open(path, "rb").read() != data:
+                    open(path, "wb").write(data)
+                for f in old:
+                    if f != name:
+                        os.remove(os.path.join(IMG_DIR, f))
+                found[kind] = name
+                continue
+        if old and (kind in want or not page):    # not fetched now: keep the copy
+            found[kind] = old[0]
+        elif old and page:                        # helminet.ch has none any more
+            for f in old:
+                os.remove(os.path.join(IMG_DIR, f))
+    return found
+
+
+def card(p, cur, lang, pics=None):
     w, e = WORDS[lang], html.escape
+    pics = pics or {}
+    up = "../" if lang == "de" else ""
     t = lambda x: html.escape(x, quote=False)    # text: quotes stay as they are
     text = cur.get(lang) or p["description"] or w["more"]
     meta = cur.get("meta_" + lang) or " · ".join(x for x in (p.get("licence"), p.get("language")) if x)
@@ -111,8 +190,13 @@ def card(p, cur, lang):
         ctas.append((p["code"], "GitHub" if p["code"].startswith("https://github.com/") else w["code"]))
     if not ctas:
         ctas.append((p["page"], w["here"]))
-    out = ['      <li class="mini">',
-           f'        <h3><a href="{e(p["page"])}">{t(p["name"])}</a></h3>',
+    out = ['      <li class="mini">']
+    if pics.get("banner"):
+        out.append(f'        <img class="mini-banner" src="{up}neighbours/img/{e(pics["banner"])}" alt="" width="1600" height="600" loading="lazy" decoding="async">')
+    elif pics.get("logo"):              # no preview: the same space, its logo in the middle — every card the same shape
+        out.append(f'        <div class="mini-banner mini-banner-logo"><img src="{up}neighbours/img/{e(pics["logo"])}" alt="" width="72" height="72" loading="lazy" decoding="async"></div>')
+    logo = f'<img class="mini-logo" src="{up}neighbours/img/{e(pics["logo"])}" alt="" width="28" height="28" loading="lazy" decoding="async">' if pics.get("logo") else ""
+    out += [f'        <h3>{logo}<a href="{e(p["page"])}">{t(p["name"])}</a></h3>',
            f'        <p>{t(text)}</p>',
            '        <p class="ctas">']
     out += [f'          <a class="btn small ghost" href="{e(u)}">{t(label)}</a>' for u, label in ctas]
@@ -159,13 +243,23 @@ def main():
         if up is not None and up != by_slug[s]["description"]:
             print(f"helminet: helminet's description of «{by_slug[s]['name']}» changed — check our sentences")
 
+    pics = {} if a.check or a.file else {slug: pictures(slug) for slug in order}
+    if not (a.check or a.file):         # copies of projects that left the page go too
+        keep = {f for v in pics.values() for f in v.values()}
+        for f in os.listdir(IMG_DIR) if os.path.isdir(IMG_DIR) else []:
+            if f not in keep and re.match(r"^[a-z0-9-]+-(logo|banner)\.\w+$", f):
+                os.remove(os.path.join(IMG_DIR, f))
+    elif os.path.isdir(IMG_DIR):        # --check / --file: the copies as they are
+        for slug in order:
+            pics[slug] = {k: f for f in os.listdir(IMG_DIR) for k in ("logo", "banner") if f.startswith(f"{slug}-{k}.")}
+
     changed = False
     for lang, path in PAGES.items():
         page = open(path, encoding="utf-8").read()
         if page.count(START) != 1 or page.count(END) != 1:
             print(f"helminet: {path} lacks the markers — nothing changed", file=sys.stderr)
             return 2
-        body = "\n".join(card(by_slug[s], curated.get(s, {}), lang) for s in order)
+        body = "\n".join(card(by_slug[s], curated.get(s, {}), lang, pics.get(s)) for s in order)
         new_page = re.sub(re.escape(START) + r".*?" + re.escape(END),
                           lambda _: f"{START}\n{body}\n      {END}", page, flags=re.S)
         if new_page != page:
