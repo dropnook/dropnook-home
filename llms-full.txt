@@ -17,7 +17,7 @@ Instant sharing for your home network — like AirDrop, but for every device and
 - Lizenz: AGPL-3.0
 - Letzte Änderung: 2026-10-16
 - Letzter Commit: 2026-10-16T08:41:12Z
-- Tags: airdrop, airdrop-alternative, dropnook, localsend, localsend-alternative
+- Tags: airdrop, airdrop-alternative, drop, dropnook, localsend, localsend-alternative, share-drop, unraid, unraid-docker
 - Beschreibung (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System. Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät. Alles im Browser: keine App zum Installieren, kein Login, keine Cloud. Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.
 - Kurz (en): Instant sharing for your home network — like AirDrop, but for every device and every system.
 - Kurz (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.
@@ -36,8 +36,8 @@ A whole team supports you in running your Unraid server — ten characters, each
 - Sprache: PHP
 - Lizenz: GPL-3.0-or-later
 - Letzte Änderung: 2026-10-20
-- Letzter Commit: 2026-10-20T12:17:19Z
-- Tags: backup, btrfs, docker, emby-cache, embycache, embychache, homelab, restore, self-hosted, snapshot, snapshots, unraid, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
+- Letzter Commit: 2026-10-20T19:12:41Z
+- Tags: backup, btrfs, docker, emby-cache, embycache, embychache, homelab, restore, self-hosted, snapshot, snapshots, unraid, unraid-plugin, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
 - Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, Ordner und VMs zurück und übt es regelmässig; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Der Nachtwächter macht alle fünf Minuten seinen Rundgang, Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login, keine Cloud, kein Konto.
 - Kurz (en): A whole team supports you in running your Unraid server — ten characters, each looking after one part of it.
 - Kurz (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon.
