@@ -6,7 +6,7 @@ server and sends you on to their own sites.
 | | Site | Code | Licence |
 |---|---|---|---|
 | **Dropnook** — instant sharing for your home network | https://dropnook.dropnook.app/ | [dropnook/dropnook.app](https://github.com/dropnook/dropnook.app) | AGPL-3.0 |
-| **Unraid Secretary Office** — a small office for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
+| **Unraid Secretary Office** — a whole team for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
 
 Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the nine projects
 from [helminet.ch](https://helminet.ch/), helmi1987's collection of their own open-source projects (which in turn
