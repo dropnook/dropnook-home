@@ -1,6 +1,6 @@
 # dropnook.app
 
-The small overview page at **https://dropnook.app/**: it presents dropnook's two open-source tools for the home
+The small overview page at **https://dropnook.app/**: it presents dropnook's two tools for the home
 server and sends you on to their own sites.
 
 | | Site | Code | Licence |
@@ -9,7 +9,7 @@ server and sends you on to their own sites.
 | **Unraid Secretary Office** — a whole team for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
 
 Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the projects
-from [helminet.ch](https://helminet.ch/), helmi1987's collection of their own open-source projects (which in turn
+from [helminet.ch](https://helminet.ch/), helmi1987's collection of their own projects (which in turn
 lists Dropnook and the office), with Benj's own line of introduction. Helminet is an independent
 project; the descriptions are shortened from helminet.ch, the logo is a copy in `logos/`.
 

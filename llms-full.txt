@@ -1,8 +1,8 @@
 # dropnook.app
 
-> Two helpful tools for your home server. Both run on your own server, need no account and send nothing to a cloud. Take the one you need — or both.
+> Two helpful tools for your home server. One shares text and files between your devices, the other supports you in running your Unraid server. Take the one you need — or both.
 
-> Zwei hilfreiche Werkzeuge für deinen Heimserver. Beide laufen auf deinem eigenen Server, brauchen kein Konto und schicken nichts in eine Cloud. Nimm das, was du brauchst — oder beide.
+> Zwei hilfreiche Werkzeuge für deinen Heimserver. Das eine teilt Text und Dateien zwischen deinen Geräten, das andere unterstützt dich bei der Serveradministration. Nimm das, was du brauchst — oder beide.
 
 ## Eigene Projekte
 
@@ -28,17 +28,17 @@ Instant sharing for your home network — like AirDrop, but for every device and
 
 ### Unraid Secretary Office
 
-A whole team supports you in running your Unraid server — ten characters, each looking after one part of it. Mr. Backupsy backs up on your schedule, encrypted off-site with Kopia too; Mr. Restori brings apps, folders and VMs back and drills it regularly; Ms. Snapshotini keeps the snapshots. Ms. Moverelli keeps the pool fast and tidy, Jack Streamer puts ready what plays next in Emby, Jellyfin and Plex. The Night Watchman makes his round every five minutes, Ms. Protocolli brings every log into one place, Ms. Dustdevil clears away what nobody uses any more. The Team Lead suggests whom to hire, the Consultant installs what’s missing with you — a plugin for Unraid 7.3.2 or newer, behind Unraid’s login, no cloud, no account.
+A whole team supports you in running your Unraid server — ten characters, each looking after one part of it. Mr. Backupsy backs up on your schedule, encrypted off-site with Kopia too; Mr. Restori brings apps, folders and VMs back and drills it regularly; Ms. Snapshotini keeps the snapshots. Ms. Moverelli keeps the pool fast and tidy, Jack Streamer puts ready what plays next in Emby, Jellyfin and Plex. The Night Watchman makes his round every five minutes, Ms. Protocolli brings every log into one place, Ms. Dustdevil clears away what nobody uses any more. The Team Lead suggests whom to hire, the Consultant installs what’s missing with you — a plugin for Unraid 7.3.2 or newer, behind Unraid’s login.
 
 - Projektseite: https://uso.dropnook.app/
 - Quellcode: https://github.com/dropnook/UnraidSecretaryOffice
 - Webseite: https://uso.dropnook.app/
 - Sprache: PHP
 - Lizenz: GPL-3.0-or-later
-- Letzte Änderung: 2026-10-22
-- Letzter Commit: 2026-10-22T21:44:08Z
+- Letzte Änderung: 2026-10-23
+- Letzter Commit: 2026-10-23T13:43:00Z
 - Tags: backup, btrfs, docker, emby-cache, embycache, embychache, homelab, restore, self-hosted, snapshot, snapshots, unraid, unraid-plugin, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
-- Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, Ordner und VMs zurück und übt es regelmässig; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Der Nachtwächter macht alle fünf Minuten seinen Rundgang, Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login, keine Cloud, kein Konto.
+- Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, Ordner und VMs zurück und übt es regelmässig; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Der Nachtwächter macht alle fünf Minuten seinen Rundgang, Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login.
 - Kurz (en): A whole team supports you in running your Unraid server — ten characters, each looking after one part of it.
 - Kurz (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon.
 - Webseite (de): https://uso.dropnook.app/de/

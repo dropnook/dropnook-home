@@ -76,12 +76,12 @@ def build():
         gh[c["key"]]["committed"] = last_commit(c["code"], gh[c["key"]]["default_branch"])
 
     short = [f"# dropnook.app", "", f"> {head_en['h1']}. {head_en['lead']}", "",
-             f"dropnook makes free, open-source tools for the home server, made for Unraid. "
+             f"dropnook makes tools for the home server, made for Unraid. "
              f"German: {SITE}/de/ · the full list: {SITE}/llms-full.txt", "", "## Products", ""]
     for c in en:
         short.append(f"- [{c['name']}]({c['site']}): {c['what']} Code: {c['code']} ({c['licence']})")
     short += ["", "## From the neighbourhood", "",
-              "- [helminet.ch](https://helminet.ch/): helmi1987's open-source projects (https://helminet.ch/llms-full.txt)", ""]
+              "- [helminet.ch](https://helminet.ch/): helmi1987's projects (https://helminet.ch/llms-full.txt)", ""]
 
     full = [f"# dropnook.app", "", f"> {head_en['h1']}. {head_en['lead']}", "",
             f"> {head_de['h1']}. {head_de['lead']}", "", "## Eigene Projekte", ""]
