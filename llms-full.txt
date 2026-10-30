@@ -35,8 +35,8 @@ A whole team supports you in running your Unraid server — ten characters, each
 - Webseite: https://uso.dropnook.app/
 - Sprache: PHP
 - Lizenz: GPL-3.0-or-later
-- Letzte Änderung: 2026-10-28
-- Letzter Commit: 2026-10-28T21:50:50Z
+- Letzte Änderung: 2026-10-29
+- Letzter Commit: 2026-10-29T22:42:01Z
 - Tags: backup, btrfs, docker, emby-cache, embycache, embychache, homelab, kopia, mediacache, restore, self-hosted, snapshot, snapshots, tailscale, unraid, unraid-plugin, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
 - Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — zehn Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, VMs, ganze Shares oder einzelne Dateien von überall zurück, wo eine Kopie liegt, und übt es regelmässig; ein Partner-Server bewahrt deine Kopien auf, auf Wunsch über das eigene Tailscale-Netz des Sekretariats; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Der Nachtwächter macht alle fünf Minuten seinen Rundgang, Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login.
 - Kurz (en): A whole team supports you in running your Unraid server — ten characters, each looking after one part of it.
