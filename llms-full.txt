@@ -10,9 +10,9 @@
 
 Instant sharing for your home network — like AirDrop, but for every device and every system. Drop in text, files or a screenshot — it is on every other device at once. All in the browser: no app to install, no login, no cloud. A Docker container on your own server, in 17 languages.
 
-- Projektseite: https://dropnook.dropnook.app/
-- Quellcode: https://github.com/dropnook/dropnook.app
-- Webseite: https://dropnook.dropnook.app/
+- Projektseite: https://drop.dropnook.app/
+- Quellcode: https://github.com/dropnook/drop
+- Webseite: https://drop.dropnook.app/
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
 - Letzte Änderung: 2026-11-14
@@ -21,7 +21,7 @@ Instant sharing for your home network — like AirDrop, but for every device and
 - Beschreibung (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System. Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät. Alles im Browser: keine App zum Installieren, kein Login, keine Cloud. Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.
 - Kurz (en): Instant sharing for your home network — like AirDrop, but for every device and every system.
 - Kurz (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.
-- Webseite (de): https://dropnook.dropnook.app/de/
+- Webseite (de): https://drop.dropnook.app/de/
 - Logo: https://dropnook.app/logos/dropnook-icon.svg
 - Logo (Titel, hell): https://dropnook.app/logos/dropnook-title-light.svg
 - Logo (Titel, dunkel): https://dropnook.app/logos/dropnook-title-dark.svg

@@ -5,7 +5,7 @@ server and sends you on to their own sites.
 
 | | Site | Code | Licence |
 |---|---|---|---|
-| **Dropnook** — instant sharing for your home network | https://dropnook.dropnook.app/ | [dropnook/dropnook.app](https://github.com/dropnook/dropnook.app) | AGPL-3.0 |
+| **Dropnook** — instant sharing for your home network | https://drop.dropnook.app/ | [dropnook/drop](https://github.com/dropnook/drop) | AGPL-3.0 |
 | **Unraid Secretary Office** — a whole team for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
 
 Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the projects
@@ -42,7 +42,7 @@ Plain static files, no build step (the neighbourhood cards are refreshed by a sm
 
 The pages carry canonical and hreflang links (en, de, x-default), Open Graph tags and schema.org JSON-LD: the
 `Organization` dropnook, the `WebSite`, the `WebPage`, and one `SoftwareApplication` per product. The two
-applications use the same `@id` as on their own sites (`https://dropnook.dropnook.app/#software`,
+applications use the same `@id` as on their own sites (`https://drop.dropnook.app/#software`,
 `https://uso.dropnook.app/#software`), so search engines can join them.
 
 ## Checking it

@@ -1,6 +1,6 @@
 // The start page is English. A browser that prefers German goes to /de/ before
 // anything is drawn — unless EN or DE was clicked here before, which is kept.
-// (As on dropnook.dropnook.app and uso.dropnook.app; the keys are the old
+// (As on drop.dropnook.app and uso.dropnook.app; the keys are the old
 // dropnook.app ones, so a choice made there before the move still counts.)
 (() => {
   let chosen = null;

@@ -1,5 +1,5 @@
 /* dropnook.app — the overview of both products. One stylesheet, no web fonts; the same family
-   as dropnook.dropnook.app and uso.dropnook.app. Light and dark follow the system, unless the
+   as drop.dropnook.app and uso.dropnook.app. Light and dark follow the system, unless the
    ☀/☾ switch set data-theme on <html> (theme.js).
    The page itself wears the dropnook avatar's slate; each product card wears its own accent:
    Dropnook's teal, the office's Unraid orange — the same values as on their sites. */
