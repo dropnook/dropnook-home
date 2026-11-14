@@ -23,8 +23,8 @@ Instant sharing for your home network — like AirDrop, but for every device and
 - Kurz (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System.
 - Webseite (de): https://drop.dropnook.app/de/
 - Logo: https://dropnook.app/logos/dropnook-icon.svg
-- Logo (Titel, hell): https://dropnook.app/logos/dropnook-title-light.svg
-- Logo (Titel, dunkel): https://dropnook.app/logos/dropnook-title-dark.svg
+- Logo (Titel, hell): https://dropnook.app/logos/drop-title-light.svg
+- Logo (Titel, dunkel): https://dropnook.app/logos/drop-title-dark.svg
 
 ### Unraid Secretary Office
 
