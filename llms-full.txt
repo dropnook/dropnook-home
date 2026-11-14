@@ -6,7 +6,7 @@
 
 ## Eigene Projekte
 
-### Dropnook
+### Drop
 
 Instant sharing for your home network — like AirDrop, but for every device and every system. Drop in text, files or a screenshot — it is on every other device at once. All in the browser: no app to install, no login, no cloud. A Docker container on your own server, in 17 languages.
 

@@ -5,12 +5,12 @@ server and sends you on to their own sites.
 
 | | Site | Code | Licence |
 |---|---|---|---|
-| **Dropnook** — instant sharing for your home network | https://drop.dropnook.app/ | [dropnook/drop](https://github.com/dropnook/drop) | AGPL-3.0 |
+| **Drop** — instant sharing for your home network | https://drop.dropnook.app/ | [dropnook/drop](https://github.com/dropnook/drop) | AGPL-3.0 |
 | **Unraid Secretary Office** — a whole team for your Unraid server | https://uso.dropnook.app/ | [dropnook/UnraidSecretaryOffice](https://github.com/dropnook/UnraidSecretaryOffice) | GPL-3.0-or-later |
 
 Below the two products, a quieter section «From the neighbourhood» / «Aus der Nachbarschaft» lists the projects
 from [helminet.ch](https://helminet.ch/), helmi1987's collection of their own projects (which in turn
-lists Dropnook and the office), with Benj's own line of introduction. Helminet is an independent
+lists Drop and the office), with Benj's own line of introduction. Helminet is an independent
 project; the descriptions are shortened from helminet.ch, the logo is a copy in `logos/`.
 
 The cards come from helminet.ch itself: `tools/import-helminet.py` reads https://helminet.ch/llms-full.txt (helmi1987's

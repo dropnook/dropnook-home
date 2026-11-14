@@ -2,7 +2,7 @@
    as drop.dropnook.app and uso.dropnook.app. Light and dark follow the system, unless the
    ☀/☾ switch set data-theme on <html> (theme.js).
    The page itself wears the dropnook avatar's slate; each product card wears its own accent:
-   Dropnook's teal, the office's Unraid orange — the same values as on their sites. */
+   Drop's teal, the office's Unraid orange — the same values as on their sites. */
 :root{
   --bg:#F5F7F8; --surface:#FFFFFF; --band:#ECF0F2; --ink:#141A20; --ink-2:#36414A; --muted:#5C6872;
   --line:#D9E0E4; --accent:#0B6E75; --accent-soft:#DFEFF0; --on-accent:#FFFFFF;
