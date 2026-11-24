@@ -103,6 +103,12 @@ h1 em{font-style:normal; color:var(--dn);
          display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
          border-top:4px solid var(--accent); border-radius:var(--radius); padding:30px 30px 26px; box-shadow:var(--shadow)}
 .product.uso{--accent:var(--uso); --accent-soft:var(--uso-soft); --on-accent:var(--uso-on)}
+/* the whole card opens the product's site (its first button stretched over the card); GitHub and the licence stay their own links */
+.product{position:relative; transition:transform .15s ease, box-shadow .15s ease}
+.product .btn.two::after{content:""; position:absolute; inset:0; border-radius:var(--radius)}
+.product .btn.ghost, .product .meta a{position:relative; z-index:1}
+.product:hover{transform:translateY(-2px); cursor:pointer}
+@media (prefers-reduced-motion:reduce){ .product, .product:hover{transition:none; transform:none} }
 .product.zp{--accent:var(--zp); --accent-soft:var(--zp-soft); --on-accent:var(--zp-on)}
 .also{padding:0 0 72px}
 .also .also-head{max-width:1040px; margin:0 auto 18px}
