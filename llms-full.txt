@@ -15,8 +15,8 @@ Instant sharing for your home network — like AirDrop, but for every device and
 - Webseite: https://drop.dropnook.app/
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
-- Letzte Änderung: 2026-11-22
-- Letzter Commit: 2026-11-22T12:56:59Z
+- Letzte Änderung: 2026-11-24
+- Letzter Commit: 2026-11-24T06:58:59Z
 - Tags: airdrop, airdrop-alternative, drop, dropnook, localsend, localsend-alternative, share-drop, unraid, unraid-docker
 - Beschreibung (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System. Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät. Alles im Browser: keine App zum Installieren, kein Login, keine Cloud. Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.
 - Kurz (en): Instant sharing for your home network — like AirDrop, but for every device and every system.
