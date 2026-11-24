@@ -8,6 +8,7 @@
   --line:#D9E0E4; --accent:#0B6E75; --accent-soft:#DFEFF0; --on-accent:#FFFFFF;
   --dn:#0B6E75; --dn-soft:#DFEFF0; --dn-on:#FFFFFF;
   --uso:#B8500B; --uso-soft:#FCEBDD; --uso-on:#FFFFFF;
+  --zp:#C93D22; --zp-soft:#FCE6E0; --zp-on:#FFFFFF;
   --shadow:0 24px 60px -30px rgba(18,27,33,.40), 0 4px 14px -8px rgba(18,27,33,.16);
   --radius:14px; color-scheme:light;
 }
@@ -17,6 +18,7 @@
     --line:#26313B; --accent:#54C0C4; --accent-soft:#13302F; --on-accent:#08161A;
     --dn:#54C0C4; --dn-soft:#13302F; --dn-on:#08161A;
     --uso:#FF9A4D; --uso-soft:#3A2414; --uso-on:#140A02;
+    --zp:#FF6B4A; --zp-soft:#3A1A14; --zp-on:#1A0804;
     --shadow:0 24px 60px -30px rgba(0,0,0,.9), 0 4px 14px -8px rgba(0,0,0,.6);
     color-scheme:dark;
   }
@@ -26,6 +28,7 @@
   --line:#26313B; --accent:#54C0C4; --accent-soft:#13302F; --on-accent:#08161A;
   --dn:#54C0C4; --dn-soft:#13302F; --dn-on:#08161A;
   --uso:#FF9A4D; --uso-soft:#3A2414; --uso-on:#140A02;
+  --zp:#FF6B4A; --zp-soft:#3A1A14; --zp-on:#1A0804;
   --shadow:0 24px 60px -30px rgba(0,0,0,.9), 0 4px 14px -8px rgba(0,0,0,.6);
   color-scheme:dark;
 }
@@ -100,6 +103,13 @@ h1 em{font-style:normal; color:var(--dn);
          display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
          border-top:4px solid var(--accent); border-radius:var(--radius); padding:30px 30px 26px; box-shadow:var(--shadow)}
 .product.uso{--accent:var(--uso); --accent-soft:var(--uso-soft); --on-accent:var(--uso-on)}
+.product.zp{--accent:var(--zp); --accent-soft:var(--zp-soft); --on-accent:var(--zp-on)}
+.also{padding:0 0 72px}
+.also .also-head{max-width:1040px; margin:0 auto 18px}
+.also .also-head h2{margin:0 0 4px; font-size:22px}
+.also .also-head p{margin:0; color:var(--muted)}
+.also .single{list-style:none; padding:0; margin:0 auto; max-width:1040px; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px}
+@media (max-width:860px){ .also .single{grid-template-columns:1fr; max-width:600px} }
 .product h2{display:flex; align-items:center; gap:14px; min-height:56px; margin:0}
 .product .icon{width:52px; height:52px; flex:none}
 .product picture{min-width:0; flex:1}
