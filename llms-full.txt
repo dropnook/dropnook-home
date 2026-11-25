@@ -48,7 +48,7 @@ A whole team supports you in running your Unraid server — eleven characters, e
 
 ### Zeropunch
 
-A punch clock that knows nothing about you. One button, «Punch», and a list of your times — on your phone, in the browser. Punch with an NFC sticker: hold your phone to a sticker on your locker or desk, and the punch is made. Every punch is encrypted in the browser; the server never sees a working time. No e-mail, no real name. Use it right away, no server of your own needed.
+A punch clock that knows nothing about you. One button, «Punch», and a list of your times — on your phone, in the browser. Punch with an NFC sticker: hold your phone to a sticker on your locker, desk, notebook or bag, and the punch is made. Every punch is encrypted in the browser; the server never sees a working time. No e-mail, no real name. Use it right away, no server of your own needed.
 
 - Projektseite: https://zeropunch.dropnook.app/
 - Quellcode: https://github.com/dropnook/zeropunch
@@ -56,9 +56,9 @@ A punch clock that knows nothing about you. One button, «Punch», and a list of
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
 - Letzte Änderung: 2026-11-25
-- Letzter Commit: 2026-11-25T10:16:47Z
+- Letzter Commit: 2026-11-25T10:24:01Z
 - Tags: end-to-end-encryption, privacy, punch-clock, pwa, stempel-uhr, stempeluhr, time-tools, time-tracking, timetools, zero-knowledge, zero-trust, zeropunch
-- Beschreibung (de): Eine Stempeluhr, die nichts über dich weiss. Ein Knopf, «Stempeln», und eine Liste deiner Zeiten — auf dem Handy, im Browser. Punchen mit NFC-Kleber: Handy an den Kleber am Spind oder Pult halten, und der Punch ist gemacht. Jeder Stempel wird schon im Browser verschlüsselt; der Server sieht nie eine Arbeitszeit. Keine E-Mail, kein echter Name. Sofort nutzbar, ohne eigenen Server.
+- Beschreibung (de): Eine Stempeluhr, die nichts über dich weiss. Ein Knopf, «Stempeln», und eine Liste deiner Zeiten — auf dem Handy, im Browser. Punchen mit NFC-Kleber: Handy an den Kleber an Spind, Pult, Notebook oder Tasche halten, und der Punch ist gemacht. Jeder Stempel wird schon im Browser verschlüsselt; der Server sieht nie eine Arbeitszeit. Keine E-Mail, kein echter Name. Sofort nutzbar, ohne eigenen Server.
 - Kurz (en): A punch clock that knows nothing about you.
 - Kurz (de): Eine Stempeluhr, die nichts über dich weiss.
 - Webseite (de): https://zeropunch.dropnook.app/
