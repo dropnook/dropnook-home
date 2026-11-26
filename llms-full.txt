@@ -16,7 +16,7 @@ Instant sharing for your home network — like AirDrop, but for every device and
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
 - Letzte Änderung: 2026-11-25
-- Letzter Commit: 2026-11-25T14:40:26Z
+- Letzter Commit: 2026-11-25T17:34:22Z
 - Tags: airdrop, airdrop-alternative, drop, dropnook, localsend, localsend-alternative, share-drop, unraid, unraid-docker
 - Beschreibung (de): Instant-Share fürs Heimnetz — wie AirDrop, nur für jedes Gerät und jedes System. Text, Dateien oder einen Screenshot hineinziehen — und es ist sofort auf jedem anderen Gerät. Alles im Browser: keine App zum Installieren, kein Login, keine Cloud. Ein Docker-Container auf deinem eigenen Server, in 17 Sprachen.
 - Kurz (en): Instant sharing for your home network — like AirDrop, but for every device and every system.
@@ -36,7 +36,7 @@ A whole team supports you in running your Unraid server — eleven characters, e
 - Sprache: PHP
 - Lizenz: GPL-3.0-or-later
 - Letzte Änderung: 2026-11-25
-- Letzter Commit: 2026-11-25T07:58:11Z
+- Letzter Commit: 2026-11-25T17:32:56Z
 - Tags: backup, btrfs, docker, emby-cache, embycache, embychache, fanboy, homelab, kopia, mediacache, restore, self-hosted, snapshot, snapshots, unraid, unraid-plugin, unraid-secretary-office, unraidsecretaryoffice, uso, zfs
 - Beschreibung (de): Ein ganzes Team unterstützt dich bei deiner Serveradministration — elf Figuren, jede kümmert sich um einen Teil davon. Herr Backupsi sichert nach deinem Zeitplan, mit Kopia verschlüsselt auch ausser Haus; Herr Restori holt Apps, VMs, ganze Shares oder einzelne Dateien von überall zurück, wo eine Kopie liegt, und übt es regelmässig; ein Partner-Server bewahrt deine Kopien auf, auf Wunsch über das eigene Tailscale-Netz des Sekretariats; Frau Snapshotini führt die Snapshots. Frau Moverelli hält den Pool schnell und aufgeräumt, Jack Streamer legt bereit, was als Nächstes in Emby, Jellyfin und Plex läuft. Fanboy regelt die Lüfter am Mainboard nach dem, was wirklich warm wird: bis zu acht Zonen, in jeder eine eigene Kurve pro Art von Wärmequelle — Disks, SSDs, NVMe, CPU, Mainboard, RAM —, jeder Lüfter vermessen, und er regelt weiter, auch wenn das Array steht. Der Nachtwächter wacht über Anmeldungen, Container, Daten und Netzwerk und meldet nur, was neu ist; Frau Protokolli bringt alle Protokolle an einen Ort, Frau Putzteufel räumt weg, was niemand mehr braucht. Der Teamchef schlägt vor, wen du einstellst, der Berater installiert mit dir, was fehlt — ein Plugin für Unraid 7.3.2 oder neuer, hinter Unraids Login.
 - Kurz (en): A whole team supports you in running your Unraid server — eleven characters, each looking after one part of it.
@@ -56,7 +56,7 @@ A punch clock that knows nothing about you. One button, «Punch», and a list of
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
 - Letzte Änderung: 2026-11-25
-- Letzter Commit: 2026-11-25T15:25:27Z
+- Letzter Commit: 2026-11-25T21:37:08Z
 - Tags: end-to-end-encryption, privacy, punch-clock, pwa, stempel-uhr, stempeluhr, time-tools, time-tracking, timetools, zero-knowledge, zero-trust, zeropunch
 - Beschreibung (de): Eine Stempeluhr, die nichts über dich weiss. Ein Knopf, «Stempeln», und eine Liste deiner Zeiten — auf dem Handy, im Browser. Punchen mit NFC-Kleber: Handy an den Kleber an Spind, Pult, Notebook oder Tasche halten, und der Punch ist gemacht. Jeder Stempel wird schon im Browser verschlüsselt; der Server sieht nie eine Arbeitszeit. Keine E-Mail, kein echter Name. Sofort nutzbar, ohne eigenen Server.
 - Kurz (en): A punch clock that knows nothing about you.
