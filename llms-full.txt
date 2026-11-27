@@ -55,8 +55,8 @@ A punch clock that knows nothing about you. One button, «Punch», and a list of
 - Webseite: https://zeropunch.dropnook.app/
 - Sprache: JavaScript
 - Lizenz: AGPL-3.0
-- Letzte Änderung: 2026-11-25
-- Letzter Commit: 2026-11-25T21:37:08Z
+- Letzte Änderung: 2026-11-27
+- Letzter Commit: 2026-11-27T11:42:55Z
 - Tags: end-to-end-encryption, privacy, punch-clock, pwa, stempel-uhr, stempeluhr, time-tools, time-tracking, timetools, zero-knowledge, zero-trust, zeropunch
 - Beschreibung (de): Eine Stempeluhr, die nichts über dich weiss. Ein Knopf, «Stempeln», und eine Liste deiner Zeiten — auf dem Handy, im Browser. Punchen mit NFC-Kleber: Handy an den Kleber an Spind, Pult, Notebook oder Tasche halten, und der Punch ist gemacht. Jeder Stempel wird schon im Browser verschlüsselt; der Server sieht nie eine Arbeitszeit. Keine E-Mail, kein echter Name. Sofort nutzbar, ohne eigenen Server.
 - Kurz (en): A punch clock that knows nothing about you.
